@@ -2,4 +2,4 @@
 
 OpenClassrooms Projet2 - Maquette de site Reservia
 
-test de GIT sur VS Code
+test de GIT sur VS
