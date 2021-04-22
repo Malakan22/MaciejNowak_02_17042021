@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+}
+
+li {
+  list-style-type: none;
+}
+
+body {
+  font-family: raleway;
+  font-size: 14px;
+}
+/* ******************************************* */
+.main_container {
+  width: 90%;
+  margin: auto;
+}
+
+/*  HEADER  */
+header {
+  background-color: lightgreen;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#reservia {
+  width: 100px;
+}
+
+.links {
+  display: flex;
+}
+
+.links li {
+  margin: 20px;
+}
+/*  END HEADER  */
+
+/**********************  MAIN  ********************/
+main {
+  background-color: lightskyblue;
+}
+
+main > * {
+  margin-bottom: 10px;
+}
+
+.rechercher {
+  display: flex;
+}
+#bouton_rechercher {
+  background-color: blue;
+  color: white;
+}
+
+.filtres {
+  display: flex;
+}
+
+.filtres ul {
+  display: flex;
+}
+
+.filtres span,
+li {
+  font-weight: bold;
+  margin: 10px;
+  padding: 5px;
+}
+
+.filtres span {
+  margin-left: 0px;
+}
+
+.filtres li {
+  border: solid black 1px;
+  border-radius: 25px;
+}
+
+#info {
+  font-size: 12px;
+}
+
+/* SECTION HEBERGEMENTS */
+
+.hebergements {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.hebergements h2 {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.hebergement_container,
+.populaires_container {
+  padding: 20px;
+  border-radius: 20px;
+}
+.hebergement_container {
+  display: flex;
+  /* justify-content: space-between; */
+  flex-wrap: wrap;
+  margin-right: 20px;
+  background-color: lightgrey;
+}
+
+.carte_hebergement {
+  width: 220px;
+  height: 180px;
+  border: solid black 1px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px;
+  margin: 20px 20px 20px 0px;
+}
+
+.populaires_container {
+  background-color: blanchedalmond;
+}
+
+.carte_populaires {
+  width: 250px;
+  height: 200px;
+  border: solid black 1px;
+  border-radius: 25px;
+  box-shadow: 0px 0px 10px;
+}
+/* box-shadow: none|h-offset v-offset blur spread color 
+|inset|initial|inherit; */
+
+/* END SECTION HEBERGEMENTS */
+
+/*  END MAIN  */
+
+/*  FOOTER  */
+footer {
+  background-color: lightpink;
+}
+/*  END FOOTER  */
+
+/* charte sont le 
+bleu #0065FC 
+plus claire #DEEBFF  
+fond : #F2F2F2. */
