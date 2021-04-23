@@ -8,10 +8,12 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/31f05b1dae.js" crossorigin="anonymous"></script>
   </head>
-  <body>
+
+  <body><!------------------------------------- BODY ---------------------------------------->
     <div class="main_container">
-      <header>
+      <header><!------------------------------ HEADER ---------------------------------------->
         <nav>
           <div id="logo">
             <a href="#"
@@ -32,15 +34,15 @@
       </header>
       <!--------------------------------------- MAIN --------------------------------------->
       <main>
-          <p>       
+          <p>
             <h2>Trouvez votre hébergement pour des vacances de reve</h2>
             <span>En plein centre ville ou en pleine nature</span>
           </p>
-          <section class="rechercher">              
-              <div>***</div>
+          <!---------------------- RECHERCHER ------------------------->
+          <section class="rechercher">
               <input type="text">
               <button id="bouton_rechercher">Rechercher</button>
-          </section><!---------------- END RECHERCHER ---------------------->
+          </section>
 
           <!------------------------ FILTRES -------------------------->
           <section class="filtres">
@@ -51,72 +53,98 @@
                   <li>Romantique</li>
                   <li>Animaux autorisés</li>
               </ul>
-              
           </section><!------------------- END FILTRES ---------------------->
-          
-          <span id="info">Plus de 500 logements sont disponibles dans cette ville</span>
-          
+          <p>ICONS:
+            <i class="fas fa-money-bill-wave"></i>
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-dog"></i>
+            <i class="fas fa-info"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-chart-line"></i>
+            <i class="fas fa-map-marker-alt"></i>
+          </p>
 
+          <span id="info">Plus de 500 logements sont disponibles dans cette ville</span>
           <!------------------------ SECTION HEBERGEMENTS -------------------------->
           <section class="hebergements">
               <div class="hebergement_container">
                 <h2>Hébergements à Marseille</h2>
                 <div class="carte_hebergement">
                   <img class="img_carte_heb" src="images/heberge1.jpg" alt="lien_image_hebergement">
-                  
+
                     <p class="bold">Auberge de la Cannebière</p>
                     <p>Nuit à partir de 25E</p>
                     <p></p>
-                </div>             
-                <div class="carte_hebergement">
-                  <img class="img_carte_heb" src="images/heberge1.jpg" alt="lien_image_hebergement">
-                </div>
-                <div class="carte_hebergement">         
-                  <img class="img_carte_heb" src="images/heberge1.jpg" alt="lien_image_hebergement">
                 </div>
                 <div class="carte_hebergement">
                   <img class="img_carte_heb" src="images/heberge1.jpg" alt="lien_image_hebergement">
                 </div>
-                <div class="carte_hebergement">  
+                <div class="carte_hebergement">
+                  <img class="img_carte_heb" src="images/heberge1.jpg" alt="lien_image_hebergement">
+                </div>
+                <div class="carte_hebergement">
+                  <img class="img_carte_heb" src="images/heberge1.jpg" alt="lien_image_hebergement">
+                </div>
+                <div class="carte_hebergement">
                   <img class="img_carte_heb" src="images/heberge1.jpg" alt="lien_image_hebergement">                </div>
                 <div class="carte_hebergement">
                   <img class="img_carte_heb" src="images/heberge1.jpg" alt="lien_image_hebergement">
                 </div>
               </div>
               <div class="populaires_container">
-                <h2>Les plus populaires</h2>  
+                <h2>Les plus populaires</h2>
                 <div class="carte_populaires">
                   <img class="img_carte_pop" src="images/populaire1.jpg" alt="lien_image_populaire">
                 </div>
                 <div class="carte_populaires"></div>
                 <div class="carte_populaires"></div>
           </section><!------------------------ END SECTION HEBERGEMENTS -------------------------->
-          
+
           <!--------------------------------------- SECTION ACTIVITES ------------------------------------>
           <section class="activites border_round">
             <h2>Activités à Marseille</h2>
             <div class="activites_container">
+
               <div class="activites_col">
-                <div class="img_act_large">                  
+                <div class="carte_activites_haut border_round">
+                  <img src="images/activites2.jpg" alt="">
+                  <p class="bold">
+                    Vieux Port
+                  </p>
                 </div>
               </div>
 
               <div class="activites_col">
-                <div class="img_act_small">                
+                <div class="carte_activites_med border_round">
+                  <p class="bold">Fort de Pomègues</p>
                 </div>
-                <div class="img_act_small"></div>'
-                </div>
-
-              <div class="activites_col">
-                <div class="img_act_large">                  
+                <div class="carte_activites_court border_round">
+                  <p class="bold">Iles du Frioul</p>
                 </div>
               </div>
 
               <div class="activites_col">
-                <div class="img_act_small"></div>
-                <div class="img_act_small"></div>
+                <div class="carte_activites_haut border_round">
+                  <p class="bold">
+                    Parc National des Calanques
+                  </p>
+                </div>
               </div>
-            </div> 
+
+              <div class="activites_col">
+                <div class="carte_activites_court border_round">
+                  <p class="bold">
+                    Notre-Dame-de-la-Garde
+                  </p>
+                </div>
+                <div class="carte_activites_med border_round">
+                  <p class="bold">
+                    Parc Longchamps
+                  </p>
+                </div>
+              </div>
+
+            </div>
           </section>
 
       </main><!--------------------------------------- END MAIN ------------------------------------>
@@ -151,10 +179,10 @@
             </li>
             <li>
               <a href="#">Soumettre votre hotel</a>
-            </li>            
+            </li>
           </ul>
         </div>
-        
+
         <div class="footer_col">
           <ul>
             <li class="footer_name">
@@ -165,7 +193,7 @@
             </li>
             <li>
               <a href="#">Nous contacter</a>
-            </li>            
+            </li>
           </ul>
         </div>
       </footer>
@@ -174,10 +202,6 @@
 
   </body>
 </html>
-
-
-
-
 
 
 
