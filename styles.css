@@ -4,7 +4,7 @@
 }
 
 body {
-  font-family: raleway;
+  font-family: raleway, arial, sans-serif;
   font-size: 14px;
 }
 
@@ -77,6 +77,11 @@ nav {
 /*  END HEADER  */
 
 /**********************  MAIN  ********************/
+/*
+bleu #0065FC
+plus claire #DEEBFF
+fond : #F2F2F2. */
+
 main > * {
   margin-bottom: 10px;
 }
@@ -84,10 +89,29 @@ main > * {
 .rechercher {
   display: flex;
 }
-#bouton_rechercher {
-  background-color: blue;
-  color: white;
+
+.rechercher i,
+input {
+  padding: 10px;
+  border: solid 1px #f2f2f2;
 }
+
+.rechercher i {
+  background-color: #f2f2f2;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+#bouton_rechercher {
+  background-color: #0065fc;
+  color: white;
+  border: solid 1px #0065fc;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 10px;
+}
+
+/* ********  FILTRES *********** */
 
 .filtres {
   display: flex;
@@ -95,26 +119,49 @@ main > * {
 
 .filtres ul {
   display: flex;
+  align-items: center;
 }
 
 .filtres span,
 li {
   font-weight: bold;
   margin: 10px;
-  padding: 5px;
 }
 
 .filtres span {
   margin-left: 0px;
+  padding: 10px;
+}
+
+.filtres i {
+  padding: 10px;
+}
+
+.filtres i {
+  border: solid 1px #f2f2f2;
+  border-radius: 50%;
+  color: #0065fc;
+  background-color: #deebff;
+  margin-right: 10px;
 }
 
 .filtres li {
-  border: solid black 1px;
+  border: solid 2px #f2f2f2;
   border-radius: 25px;
+  padding-right: 10px;
 }
 
 #info {
   font-size: 12px;
+}
+
+#info i {
+  text-align: center;
+  width: 10px;
+  color: #0065fc;
+  border: solid 1px #f2f2f2;
+  border-radius: 50%;
+  padding: 5px;
 }
 
 /************** HEBERGEMENTS *************/
@@ -131,7 +178,7 @@ li {
 
 .hebergement_container,
 .populaires_container {
-  padding: 30px 0px 30px 30px;
+  padding: 30px 30px 30px 30px;
   border-radius: 20px;
   background-color: #f2f2f2;
 }
@@ -156,15 +203,37 @@ li {
   height: 220px;
 }
 
+.carte_hebergement p {
+  padding: 5px 2px 0px 10px;
+}
+
+.fa-star {
+  color: #0065fc;
+}
+
+.populaires-titre {
+  display: flex;
+  width: 400px;
+  /* margin-right: 40px; */
+}
+
 .carte_populaires {
+  display: flex;
   width: 400px;
   height: 180px;
 }
+
 .img_carte_heb {
   width: 100%;
   height: 70%;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
+}
+
+.afficher-plus {
+  width: 100%;
+  font-weight: 700;
+  margin-top: 30px;
 }
 
 .img_carte_pop {
@@ -174,6 +243,17 @@ li {
   border-bottom-left-radius: 20px;
 }
 
+.carte-populaires-texte {
+  padding: 20px;
+}
+
+.carte-populaires-texte p {
+  margin-bottom: 10px;
+}
+
+.carte-populaires-texte p:last-child {
+  margin-top: 90px;
+}
 /* box-shadow: none|h-offset v-offset blur spread color */
 
 /************** ACTIVITES *************/
