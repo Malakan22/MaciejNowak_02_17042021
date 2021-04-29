@@ -6,6 +6,9 @@
 body {
   font-family: raleway, arial, sans-serif;
   font-size: 14px;
+  width: 90%;
+  margin: auto;
+
 }
 
 img {
@@ -26,11 +29,12 @@ a {
 
 a:link,
 a:visited {
-  color: #0065fc;
+  color: black;
 }
 
 a:hover {
-  color: red;
+  border-top: solid #0065fc 1px;
+  color: #0065fc;
 }
 a:active {
   color: red;
@@ -44,17 +48,13 @@ a:active {
   font-weight: 700;
 }
 
-/* .color {
-  background-color: gray;
-} */
-
 /* ******************************************* */
-.main_container {
-  width: 95%;
-  margin: auto;
-}
 
 /*  HEADER  */
+
+header{
+  margin-top: 20px;
+}
 
 nav {
   display: flex;
@@ -70,8 +70,13 @@ nav {
   display: flex;
 }
 
-.links li {
-  margin: 20px;
+.links a{
+  padding: 20px;
+}
+
+#sinscrire{
+  font-weight: 700;
+  color: #0065fc;
 }
 
 /*  END HEADER  */
@@ -117,6 +122,13 @@ input {
   display: flex;
 }
 
+/*  titre filtres */
+.filtres span {
+  margin-left: 0px;
+  padding: 10px;
+
+}
+
 .filtres ul {
   display: flex;
   align-items: center;
@@ -128,17 +140,13 @@ li {
   margin: 10px;
 }
 
-.filtres span {
-  margin-left: 0px;
-  padding: 10px;
-}
-
 .filtres i {
   padding: 10px;
 }
 
 .filtres i {
-  border: solid 1px #f2f2f2;
+  position: relative;
+  left: -2px;
   border-radius: 50%;
   color: #0065fc;
   background-color: #deebff;
@@ -146,9 +154,14 @@ li {
 }
 
 .filtres li {
-  border: solid 2px #f2f2f2;
+  border: solid 1px #f2f2f2;
   border-radius: 25px;
-  padding-right: 10px;
+  padding-right: 9px;
+}
+
+.familial{
+width: 15px;
+text-align: center;
 }
 
 #info {
@@ -178,7 +191,7 @@ li {
 
 .hebergement_container,
 .populaires_container {
-  padding: 30px 30px 30px 30px;
+  padding: 30px 20px 30px 30px;
   border-radius: 20px;
   background-color: #f2f2f2;
 }
@@ -186,20 +199,20 @@ li {
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
-  margin-right: 20px;
+  margin-right: 50px;
 }
 
 .carte_hebergement,
 .carte_populaires {
   border: solid white 4px;
   border-radius: 20px;
-  box-shadow: 0px 0px 10px lightgray;
-  margin: 30px 40px 20px 0px;
+  box-shadow: 0px 0px 10px grey;
+  margin: 30px 30px 20px 0px;
   background-color: white;
 }
 
 .carte_hebergement {
-  width: 255px;
+  width: 240px;
   height: 220px;
 }
 
@@ -207,7 +220,7 @@ li {
   padding: 5px 2px 0px 10px;
 }
 
-.fa-star {
+.etoile {
   color: #0065fc;
 }
 
@@ -219,7 +232,7 @@ li {
 
 .carte_populaires {
   display: flex;
-  width: 400px;
+  width: 380px;
   height: 180px;
 }
 
@@ -237,7 +250,7 @@ li {
 }
 
 .img_carte_pop {
-  width: 40%;
+  width: 45%;
   height: 100%;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
@@ -266,17 +279,6 @@ li {
   margin-bottom: 20px;
 }
 
-.activites img {
-  height: 90%;
-  border-top-right-radius: 20px;
-  border-top-left-radius: 20px;
-}
-
-.activites p {
-  height: 100%;
-  padding: 15px;
-}
-
 .activites_container {
   display: flex;
   justify-content: space-between;
@@ -295,12 +297,24 @@ li {
   margin-right: 0px;
 } /* elimine l'espace à droite du dernier élément */
 
-.carte_activites_haut {
+.activites img {
+  height: 80%;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+.activites p {
+  padding: 15px;
+  /* align-self: center; */
+}
+
+
+.carte_activites_haut{
   height: 100%;
 }
 
 .carte_activites_med {
-  height: 50%;
+  height: 45%;
 }
 
 .carte_activites_court {
@@ -310,10 +324,22 @@ li {
 .carte_activites_haut,
 .carte_activites_med,
 .carte_activites_court {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: white;
-  box-shadow: 0px 0px 10px #f2f2f2;
+  box-shadow: 0px 0px 10px grey;
 }
 
+.carte_activites_haut img{
+  height: 420px;
+}
+.carte_activites_med img{
+  height: 160px;
+}
+.carte_activites_court img{
+  height: 140px;
+}
 /***********************  FOOTER  *************************/
 footer {
   background-color: #f2f2f2;
@@ -330,12 +356,13 @@ footer {
   font-weight: 900;
 }
 
-/* #footer_links a {
+ #footer_links a {
   font-weight: 500;
 }
 
 #footer_links a:link,
-a:visited {
+#footer_links a:visited,
+{
   color: black;
 }
 #footer_links a:hover {
