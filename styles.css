@@ -8,7 +8,6 @@ body {
   font-size: 14px;
   width: 90%;
   margin: auto;
-
 }
 
 img {
@@ -52,8 +51,8 @@ a:active {
 
 /*  HEADER  */
 
-header{
-  margin-top: 20px;
+header {
+  margin-top: 30px;
 }
 
 nav {
@@ -70,11 +69,11 @@ nav {
   display: flex;
 }
 
-.links a{
+.links a {
   padding: 20px;
 }
 
-#sinscrire{
+#sinscrire {
   font-weight: 700;
   color: #0065fc;
 }
@@ -114,6 +113,7 @@ input {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   padding: 10px;
+  cursor: pointer;
 }
 
 /* ********  FILTRES *********** */
@@ -125,8 +125,9 @@ input {
 /*  titre filtres */
 .filtres span {
   margin-left: 0px;
-  padding: 10px;
-
+  padding: 20px 0px;
+  font-weight: 700;
+  margin-right: 10px;
 }
 
 .filtres ul {
@@ -134,8 +135,7 @@ input {
   align-items: center;
 }
 
-.filtres span,
-li {
+.filtres li {
   font-weight: bold;
   margin: 10px;
 }
@@ -159,9 +159,9 @@ li {
   padding-right: 9px;
 }
 
-.familial{
-width: 15px;
-text-align: center;
+.familial {
+  width: 15px;
+  text-align: center;
 }
 
 #info {
@@ -179,27 +179,32 @@ text-align: center;
 
 /************** HEBERGEMENTS *************/
 
+.border {
+  border: solid 1px blue;
+}
+
 .hebergements {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
 }
 
-.hebergements h2 {
-  width: 100%;
+.hebergement_container {
+  border-radius: 20px;
+  background-color: #f2f2f2;
+  padding: 30px;
+  max-width: 850px;
 }
 
-.hebergement_container,
 .populaires_container {
-  padding: 30px 20px 30px 30px;
+  padding: 20px;
   border-radius: 20px;
   background-color: #f2f2f2;
 }
-.hebergement_container {
+.container-cartes-heberge {
   display: flex;
   flex-wrap: wrap;
-  align-content: flex-start;
-  margin-right: 50px;
+  justify-content: space-between;
 }
 
 .carte_hebergement,
@@ -207,7 +212,7 @@ text-align: center;
   border: solid white 4px;
   border-radius: 20px;
   box-shadow: 0px 0px 10px grey;
-  margin: 30px 30px 20px 0px;
+  margin: 20px 0px;
   background-color: white;
 }
 
@@ -220,14 +225,19 @@ text-align: center;
   padding: 5px 2px 0px 10px;
 }
 
+.img_carte_heb {
+  width: 100%;
+  height: 70%;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
 .etoile {
   color: #0065fc;
 }
 
 .populaires-titre {
   display: flex;
-  width: 400px;
-  /* margin-right: 40px; */
+  justify-content: space-between;
 }
 
 .carte_populaires {
@@ -236,17 +246,13 @@ text-align: center;
   height: 180px;
 }
 
-.img_carte_heb {
-  width: 100%;
-  height: 70%;
-  border-top-right-radius: 20px;
-  border-top-left-radius: 20px;
+.afficher-plus {
+  font-weight: 700;
+  padding: 20px 0px;
 }
 
-.afficher-plus {
-  width: 100%;
-  font-weight: 700;
-  margin-top: 30px;
+.afficher-plus span {
+  cursor: pointer;
 }
 
 .img_carte_pop {
@@ -257,21 +263,16 @@ text-align: center;
 }
 
 .carte-populaires-texte {
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  justify-content: space-between;
 }
 
-.carte-populaires-texte p {
-  margin-bottom: 10px;
-}
-
-.carte-populaires-texte p:last-child {
-  margin-top: 90px;
-}
 /* box-shadow: none|h-offset v-offset blur spread color */
 
 /************** ACTIVITES *************/
 .activites {
-  /* background-color: #f2f2f2; */
   padding: 30px 0px 30px 0px;
 }
 
@@ -305,11 +306,9 @@ text-align: center;
 
 .activites p {
   padding: 15px;
-  /* align-self: center; */
 }
 
-
-.carte_activites_haut{
+.carte_activites_haut {
   height: 100%;
 }
 
@@ -323,6 +322,7 @@ text-align: center;
 
 .carte_activites_haut,
 .carte_activites_med,
+.carte_activites_med_grand,
 .carte_activites_court {
   display: flex;
   flex-direction: column;
@@ -331,48 +331,40 @@ text-align: center;
   box-shadow: 0px 0px 10px grey;
 }
 
-.carte_activites_haut img{
+.carte_activites_haut img {
   height: 420px;
 }
-.carte_activites_med img{
+.carte_activites_med img {
   height: 160px;
 }
-.carte_activites_court img{
+.carte_activites_med_grand img {
+  height: 185px;
+}
+.carte_activites_court img {
   height: 140px;
 }
 /***********************  FOOTER  *************************/
 footer {
   background-color: #f2f2f2;
   display: flex;
-  /* justify-content: space-between; */
-  margin-bottom: 0px;
-}
-/*
-.footer_col {
-  border: solid 1px black;
-} */
-
-.footer_col span {
-  font-weight: 900;
+  margin: 0px;
+  margin-bottom: 50px;
 }
 
- #footer_links a {
-  font-weight: 500;
-}
-
-#footer_links a:link,
-#footer_links a:visited,
-{
-  color: black;
-}
-#footer_links a:hover {
-  color: red;
+.footer_name {
   font-weight: 700;
-} */
+  margin-bottom: 10px;
+}
 
-/*  END FOOTER  */
+.footer_col {
+  width: 100%;
+  padding: 20px;
+}
 
-/* charte sont le
-bleu #0065FC
-plus claire #DEEBFF
-fond : #F2F2F2. */
+.footer_col li {
+  padding: 5px;
+}
+
+.footer_col a:hover {
+  border: none;
+}
