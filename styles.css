@@ -6,7 +6,7 @@
 body {
   font-family: raleway, arial, sans-serif;
   font-size: 14px;
-  width: 90%;
+  width: 93%;
   margin: auto;
 }
 
@@ -132,12 +132,24 @@ input {
 
 .filtres ul {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  /* align-items: center; */
 }
 
 .filtres li {
+  display: flex;
+  align-items: center;
   font-weight: bold;
   margin: 10px;
+  border: solid 2px #f2f2f2;
+  border-radius: 25px;
+  padding-right: 9px;
+}
+
+.filtres li:hover {
+  cursor: pointer;
+  color: #deebff;
+  background: #0065fc;
 }
 
 .filtres i {
@@ -151,12 +163,6 @@ input {
   color: #0065fc;
   background-color: #deebff;
   margin-right: 10px;
-}
-
-.filtres li {
-  border: solid 1px #f2f2f2;
-  border-radius: 25px;
-  padding-right: 9px;
 }
 
 .familial {
@@ -179,28 +185,24 @@ input {
 
 /************** HEBERGEMENTS *************/
 
-.border {
-  border: solid 1px blue;
-}
-
 .hebergements {
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
+  margin: 20px 0px;
 }
 
-.hebergement_container {
+.hebergement_container,
+.populaires_container {
   border-radius: 20px;
   background-color: #f2f2f2;
   padding: 30px;
+}
+
+.hebergement_container {
+  margin-right: 30px;
   max-width: 850px;
 }
 
-.populaires_container {
-  padding: 20px;
-  border-radius: 20px;
-  background-color: #f2f2f2;
-}
 .container-cartes-heberge {
   display: flex;
   flex-wrap: wrap;
@@ -219,6 +221,7 @@ input {
 .carte_hebergement {
   width: 240px;
   height: 220px;
+  margin-right: 5px;
 }
 
 .carte_hebergement p {
@@ -235,6 +238,15 @@ input {
   color: #0065fc;
 }
 
+.afficher-plus {
+  border: solid 1px red;
+  font-weight: 700;
+}
+
+.afficher-plus span {
+  cursor: pointer;
+}
+
 .populaires-titre {
   display: flex;
   justify-content: space-between;
@@ -244,15 +256,7 @@ input {
   display: flex;
   width: 380px;
   height: 180px;
-}
-
-.afficher-plus {
-  font-weight: 700;
-  padding: 20px 0px;
-}
-
-.afficher-plus span {
-  cursor: pointer;
+  margin: 20px auto;
 }
 
 .img_carte_pop {
@@ -269,11 +273,10 @@ input {
   justify-content: space-between;
 }
 
-/* box-shadow: none|h-offset v-offset blur spread color */
-
 /************** ACTIVITES *************/
 .activites {
-  padding: 30px 0px 30px 0px;
+  padding: 30px 0px;
+  margin: 20px 0px;
 }
 
 .activites h2 {
@@ -291,15 +294,13 @@ input {
   justify-content: space-between;
   width: 320px;
   height: 460px;
-  margin-right: 20px;
 }
 
-.activites_col:last-child {
-  margin-right: 0px;
-} /* elimine l'espace à droite du dernier élément */
+.activites_col a:hover {
+  border: none;
+}
 
 .activites img {
-  height: 80%;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
 }
@@ -332,7 +333,7 @@ input {
 }
 
 .carte_activites_haut img {
-  height: 420px;
+  height: 410px;
 }
 .carte_activites_med img {
   height: 160px;
@@ -343,6 +344,7 @@ input {
 .carte_activites_court img {
   height: 140px;
 }
+
 /***********************  FOOTER  *************************/
 footer {
   background-color: #f2f2f2;
@@ -367,4 +369,74 @@ footer {
 
 .footer_col a:hover {
   border: none;
+}
+
+/***********************  MEDIA QUERIES  *************************/
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+  .rechercher {
+    border: solid 1px black;
+  }
+  .rechercher input {
+    width: 70%;
+  }
+
+  .filtres {
+    flex-wrap: wrap;
+  }
+  .filtres li {
+    flex-wrap: nowrap;
+  }
+
+  /************** MEDIAQ - HEBERGEMENTS & POPULAIRES *************/
+
+  .hebergements {
+    flex-direction: column;
+  }
+
+  .hebergement_container {
+    background-color: white;
+    margin-right: 0px;
+    order: 2;
+  }
+
+  .container-cartes-heberge {
+    justify-content: center;
+  }
+
+  .carte_hebergement,
+  .carte_populaires,
+  .activites_col {
+    width: 100%;
+    max-width: 380px;
+  }
+
+  /************** MEDIAQ - ACTIVITES *************/
+
+  body {
+    width: 100%;
+  }
+
+  .activites_container {
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 30px;
+  }
+
+  .activites_col {
+    justify-content: space-evenly;
+  }
+
+  .activites h2 {
+    margin-left: 30px;
+  }
+
+  /***************** MEDIAQ - FOOTER  *******************/
+
+  footer {
+    flex-direction: column;
+  }
 }
