@@ -52,46 +52,50 @@ a:active {
 /*  HEADER  */
 
 header {
-  margin-top: 30px;
+  margin: 30px 0px;
 }
 
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+}
+
+#logo {
+  width: 78%;
+}
+
+#logo:hover {
+  border: none;
+}
+
+.links {
+  display: flex;
+}
+.links a {
+  padding: 20px;
 }
 
 #reservia {
   width: 100px;
 }
 
-.links {
-  display: flex;
-}
-
-.links a {
-  padding: 20px;
-}
-
 #sinscrire {
   font-weight: 700;
   color: #0065fc;
+  padding: 20px 0px;
 }
 
-/*  END HEADER  */
-
 /**********************  MAIN  ********************/
-/*
-bleu #0065FC
-plus claire #DEEBFF
-fond : #F2F2F2. */
 
-main > * {
+.container-top h2 {
   margin-bottom: 10px;
 }
 
 .rechercher {
   display: flex;
+  margin: 20px 0px;
 }
 
 .rechercher i,
@@ -116,6 +120,14 @@ input {
   cursor: pointer;
 }
 
+#loupe i {
+  display: none;
+  background-color: #0065fc;
+  border-radius: 25%;
+  color: white;
+  border: solid 1px #0065fc;
+}
+
 /* ********  FILTRES *********** */
 
 .filtres {
@@ -125,9 +137,9 @@ input {
 /*  titre filtres */
 .filtres span {
   margin-left: 0px;
+  margin-right: 20px;
   padding: 20px 0px;
   font-weight: 700;
-  margin-right: 10px;
 }
 
 .filtres ul {
@@ -140,7 +152,7 @@ input {
   display: flex;
   align-items: center;
   font-weight: bold;
-  margin: 10px;
+  margin: 10px 10px 20px 0px;
   border: solid 2px #f2f2f2;
   border-radius: 25px;
   padding-right: 9px;
@@ -153,16 +165,13 @@ input {
 }
 
 .filtres i {
-  padding: 10px;
-}
-
-.filtres i {
   position: relative;
   left: -2px;
   border-radius: 50%;
   color: #0065fc;
   background-color: #deebff;
   margin-right: 10px;
+  padding: 10px;
 }
 
 .familial {
@@ -185,20 +194,21 @@ input {
 
 /************** HEBERGEMENTS *************/
 
+.border {
+  border: solid 2px blue;
+}
+
 .hebergements {
   display: flex;
   justify-content: space-between;
   margin: 20px 0px;
 }
 
-.hebergement_container,
-.populaires_container {
-  border-radius: 20px;
-  background-color: #f2f2f2;
-  padding: 30px;
-}
-
 .hebergement_container {
+  background-color: #f2f2f2;
+  border-radius: 20px;
+  padding: 30px;
+  padding-bottom: 0px;
   margin-right: 30px;
   max-width: 850px;
 }
@@ -207,6 +217,10 @@ input {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+
+.carte_hebergement a:hover {
+  color: black;
 }
 
 .carte_hebergement,
@@ -219,18 +233,19 @@ input {
 }
 
 .carte_hebergement {
-  width: 240px;
-  height: 220px;
+  width: 220px;
+  height: 170px;
   margin-right: 5px;
 }
 
-.carte_hebergement p {
+.carte_hebergement p,
+h4 {
   padding: 5px 2px 0px 10px;
 }
 
 .img_carte_heb {
   width: 100%;
-  height: 70%;
+  height: 60%;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
 }
@@ -239,12 +254,24 @@ input {
 }
 
 .afficher-plus {
-  border: solid 1px red;
   font-weight: 700;
+  padding: 10px 0px;
 }
 
 .afficher-plus span {
   cursor: pointer;
+}
+
+/* ************* CARTES POPULAIRES ************** */
+
+.populaires_container {
+  background-color: #f2f2f2;
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.populaires_container a:hover {
+  color: black;
 }
 
 .populaires-titre {
@@ -254,13 +281,13 @@ input {
 
 .carte_populaires {
   display: flex;
-  width: 380px;
-  height: 180px;
-  margin: 20px auto;
+  width: 350px;
+  height: 125px;
+  margin: 20px 0px;
 }
 
 .img_carte_pop {
-  width: 45%;
+  width: 35%;
   height: 100%;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
@@ -271,6 +298,11 @@ input {
   flex-direction: column;
   padding: 10px;
   justify-content: space-between;
+}
+
+.carte-populaires-texte h4 {
+  padding: 0px;
+  margin-bottom: 10px;
 }
 
 /************** ACTIVITES *************/
@@ -288,12 +320,16 @@ input {
   justify-content: space-between;
 }
 
+.activites_container a:hover {
+  color: black;
+}
+
 .activites_col {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 320px;
-  height: 460px;
+  height: 440px;
 }
 
 .activites_col a:hover {
@@ -333,16 +369,16 @@ input {
 }
 
 .carte_activites_haut img {
-  height: 410px;
+  height: 395px;
 }
 .carte_activites_med img {
-  height: 160px;
+  height: 150px;
 }
 .carte_activites_med_grand img {
   height: 185px;
 }
 .carte_activites_court img {
-  height: 140px;
+  height: 130px;
 }
 
 /***********************  FOOTER  *************************/
@@ -350,17 +386,17 @@ footer {
   background-color: #f2f2f2;
   display: flex;
   margin: 0px;
-  margin-bottom: 50px;
+  padding: 30px 0px;
+}
+
+.footer_col {
+  width: 100%;
+  padding: 10px;
 }
 
 .footer_name {
   font-weight: 700;
   margin-bottom: 10px;
-}
-
-.footer_col {
-  width: 100%;
-  padding: 20px;
 }
 
 .footer_col li {
@@ -372,25 +408,81 @@ footer {
 }
 
 /***********************  MEDIA QUERIES  *************************/
+/***********************  MOBILE - 375px  *************************/
 
-@media (max-width: 768px) {
-  nav {
-    flex-direction: column;
+@media (max-width: 767px) {
+  body {
+    width: 100%;
   }
-  .rechercher {
-    border: solid 1px black;
-  }
-  .rechercher input {
+
+  #logo {
     width: 70%;
+  }
+
+  #sinscrire {
+    padding-right: 20px;
+    order: -1;
+  }
+
+  #logo {
+    padding-left: 20px;
+    order: -2;
+  }
+
+  nav a:hover {
+    border: none;
+  }
+
+  .links {
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .links li {
+    text-align: center;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .links a {
+    display: block;
+    border-bottom: solid 3px #f2f2f2;
+  }
+  .links a:hover {
+    border-bottom: solid 3px #0065fc;
+  }
+
+  /* ************************************** */
+  .container-top {
+    padding: 0px 30px;
+  }
+
+  .rechercher input {
+    width: 60%;
+  }
+
+  #bouton_rechercher {
+    display: none;
+  }
+
+  #loupe i {
+    display: block;
+    position: relative;
+    left: -10px;
+    top: 0;
   }
 
   .filtres {
     flex-wrap: wrap;
   }
+
   .filtres li {
     flex-wrap: nowrap;
   }
 
+  .border {
+    border: solid 2px red;
+  }
   /************** MEDIAQ - HEBERGEMENTS & POPULAIRES *************/
 
   .hebergements {
@@ -411,14 +503,19 @@ footer {
   .carte_populaires,
   .activites_col {
     width: 100%;
-    max-width: 380px;
+    max-width: 290px;
+  }
+
+  .carte_populaires {
+    margin: 30px auto;
+  }
+
+  .populaires_container {
+    border-radius: 0;
+    padding: 20px;
   }
 
   /************** MEDIAQ - ACTIVITES *************/
-
-  body {
-    width: 100%;
-  }
 
   .activites_container {
     flex-direction: column;
@@ -438,5 +535,42 @@ footer {
 
   footer {
     flex-direction: column;
+  }
+  .footer_col {
+    width: 80%;
+    padding: 10px 20px;
+  }
+
+  .footer_name {
+    margin: 0px;
+  }
+}
+/* ***************************************************************** */
+/* ************************ @MEDIA Q - TABLETTES ******************* */
+/* ************************* (769 px - 991 px) ********************* */
+
+@media (min-width: 768px) {
+  #logo {
+    width: 50%;
+  }
+
+  .container-cartes-heberge article:nth-child(n + 4) {
+    display: none;
+  }
+
+  .carte_populaires {
+    width: 310px;
+  }
+
+  .afficher-plus {
+    padding-bottom: 20px;
+  }
+
+  .activites_container {
+    flex-wrap: wrap;
+  }
+
+  .activites_col {
+    margin-bottom: 50px;
   }
 }
