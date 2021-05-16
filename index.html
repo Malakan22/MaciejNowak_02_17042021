@@ -19,7 +19,7 @@
 
   <body>
     <header>
-      <!-- ---------------------------- HEADER ---------------------------------------->
+      <!-- **************** HEADER ***************** -->
 
       <nav>
         <a id="logo" href="#"
@@ -36,21 +36,22 @@
         <a href="#" id="sinscrire">S'inscrire</a>
       </nav>
     </header>
-    <!-- ------------------------------------- MAIN --------------------------------------->
+
+    <!-- *****************  MAIN ***************** -->
     <main>
       <div class="container-top">
         <h2>Trouvez votre hébergement pour des vacances de rêve</h2>
         <span>En plein centre ville ou en pleine nature</span>
 
-        <!-- -------------------- RECHERCHER ------------------------->
-        <section class="rechercher">
+        <!-- *****************  RECHERCHER *****************  -->
+        <div class="rechercher">
           <i class="fas fa-map-marker-alt"></i>
           <input type="text" placeholder="Choisissez une ville..." />
           <button id="bouton_rechercher">Rechercher</button>
           <span id="loupe"><i class="fas fa-search"></i></span>
-        </section>
-        <!-- ---------------------- FILTRES -------------------------->
-        <section class="filtres">
+        </div>
+        <!-- *****************  FILTRES ***************** -->
+        <div class="filtres">
           <span>Filtres</span>
           <ul>
             <li><i class="fas fa-money-bill-wave"></i>Economiques</li>
@@ -58,15 +59,15 @@
             <li><i class="fas fa-heart"></i>Romantique</li>
             <li><i class="fas fa-dog"></i>Animaux autorisés</li>
           </ul>
-        </section>
-        <!-- ----------------- END FILTRES ---------------------->
+        </div>
+        <!-- *****************  END FILTRES *****************  -->
         <span id="info">
           <i class="fas fa-info"></i>
           Plus de 500 logements sont disponibles dans cette ville
         </span>
       </div>
 
-      <!-- ---------------------- SECTION HEBERGEMENTS -------------------------->
+      <!-- *****************  SECTION HEBERGEMENTS *****************  -->
       <section class="hebergements" id="heberge">
         <div class="hebergement_container">
           <h2>Hébergements à Marseille</h2>
@@ -86,7 +87,7 @@
                   <span class="fas fa-star etoile"></span>
                   <span class="fas fa-star etoile"></span>
                   <span class="fas fa-star etoile"></span>
-                  <span class="far fa-star etoile"></span>
+                  <span class="fas fa-star etoile-grise"></span>
                 </p>
               </a>
             </article>
@@ -124,7 +125,7 @@
                   <span class="fas fa-star etoile"></span>
                   <span class="fas fa-star etoile"></span>
                   <span class="fas fa-star etoile"></span>
-                  <span class="far fa-star etoile"></span>
+                  <span class="fas fa-star etoile-grise"></span>
                 </p>
               </a>
             </article>
@@ -142,8 +143,8 @@
                   <span class="fas fa-star etoile"></span>
                   <span class="fas fa-star etoile"></span>
                   <span class="fas fa-star etoile"></span>
-                  <span class="far fa-star etoile"></span>
-                  <span class="far fa-star etoile"></span>
+                  <span class="fas fa-star etoile-grise"></span>
+                  <span class="fas fa-star etoile-grise"></span>
                 </p>
               </a>
             </article>
@@ -162,7 +163,7 @@
                   <span class="fas fa-star etoile"></span>
                   <span class="fas fa-star etoile"></span>
                   <span class="fas fa-star etoile"></span>
-                  <span class="far fa-star etoile"></span>
+                  <span class="fas fa-star etoile-grise"></span>
                 </p>
               </a>
             </article>
@@ -192,7 +193,7 @@
         </div>
         <!-- hebergement_container-->
 
-        <!-- --------- LES PLUS POPULAIRES --------- -->
+        <!-- *****************  LES PLUS POPULAIRES *****************  -->
         <div class="populaires_container">
           <div class="populaires-titre">
             <h2>Les plus populaires</h2>
@@ -239,7 +240,7 @@
                     <span class="fas fa-star etoile"></span>
                     <span class="fas fa-star etoile"></span>
                     <span class="fas fa-star etoile"></span>
-                    <span class="far fa-star etoile"></span>
+                    <span class="fas fa-star etoile-grise"></span>
                   </p>
                 </div>
               </div>
@@ -263,16 +264,16 @@
                   <span class="fas fa-star etoile"></span>
                   <span class="fas fa-star etoile"></span>
                   <span class="fas fa-star etoile"></span>
-                  <span class="far fa-star etoile"></span>
+                  <span class="fas fa-star etoile-grise"></span>
                 </p>
               </div>
             </article>
           </a>
         </div>
       </section>
-      <!-- ---------------------- END SECTION HEBERGEMENTS -------------------------->
+      <!-- *****************  END SECTION HEBERGEMENTS ***************** -->
 
-      <!-- ------------------------------------- SECTION ACTIVITES ------------------------------------>
+      <!-- *****************  SECTION ACTIVITES ***************** -->
       <section class="activites">
         <h2>Activités à Marseille</h2>
         <div class="activites_container">
@@ -280,9 +281,9 @@
             <!-- COL 1 -->
             <article class="carte_activites_haut border_round">
               <a href="#">
-                <div class="test">
+                <div>
                   <img src="images/activites1.jpg" alt="" />
-                  <p class="bold">Vieux Port</p>
+                  <h4>Vieux Port</h4>
                 </div>
               </a>
             </article>
@@ -293,14 +294,14 @@
             <article class="carte_activites_med_grand border_round">
               <a href="#">
                 <img src="images/activites2.jpg" alt="" />
-                <p class="bold">Fort de Pomègues</p>
+                <h4>Fort de Pomègues</h4>
               </a>
             </article>
 
             <article class="carte_activites_court border_round">
               <a href="#">
                 <img src="images/activites3.jpg" alt="" />
-                <p class="bold">Iles du Frioul</p>
+                <h4>Iles du Frioul</h4>
               </a>
             </article>
           </div>
@@ -310,7 +311,7 @@
             <article class="carte_activites_haut border_round">
               <a href="#">
                 <img src="images/activites4.jpg" alt="" />
-                <p class="bold">Parc National des Calanques</p>
+                <h4>Parc National des Calanques</h4>
               </a>
             </article>
           </div>
@@ -320,22 +321,23 @@
             <article class="carte_activites_med border_round">
               <a href="#">
                 <img src="images/activites5.jpg" alt="" />
-                <p class="bold">Notre-Dame-de-la-Garde</p>
+                <h4>Notre-Dame-de-la-Garde</h4>
               </a>
             </article>
+
             <article class="carte_activites_med border_round">
               <a href="#">
                 <img src="images/activites6.jpg" alt="" />
-                <p class="bold">Parc Longchamps</p>
+                <h4>Parc Longchamps</h4>
               </a>
             </article>
           </div>
         </div>
       </section>
     </main>
-    <!-- ------------------------------------- END MAIN ------------------------------------>
+    <!-- *****************  END MAIN *****************   -->
 
-    <!-- ------------------------------------- FOOTER ------------------------------------>
+    <!-- *****************  FOOTER *****************  -->
     <footer>
       <div class="footer_col">
         <ul>

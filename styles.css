@@ -82,9 +82,14 @@ nav {
 }
 
 #sinscrire {
+  border-top: solid white 1px;
   font-weight: 700;
   color: #0065fc;
   padding: 20px 0px;
+}
+
+#sinscrire:hover {
+  border-top: solid #0065fc 1px;
 }
 
 /**********************  MAIN  ********************/
@@ -98,22 +103,24 @@ nav {
   margin: 20px 0px;
 }
 
-.rechercher i,
-input {
+.rechercher input {
+  border: none;
+  border-top: solid 1px #f2f2f2;
+  border-bottom: solid 1px #f2f2f2;
   padding: 10px;
-  border: solid 1px #f2f2f2;
 }
 
 .rechercher i {
   background-color: #f2f2f2;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
+  padding: 10px;
 }
 
 #bouton_rechercher {
+  border: none;
   background-color: #0065fc;
   color: white;
-  border: solid 1px #0065fc;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   padding: 10px;
@@ -125,7 +132,6 @@ input {
   background-color: #0065fc;
   border-radius: 25%;
   color: white;
-  border: solid 1px #0065fc;
 }
 
 /* ********  FILTRES *********** */
@@ -145,7 +151,6 @@ input {
 .filtres ul {
   display: flex;
   flex-wrap: wrap;
-  /* align-items: center; */
 }
 
 .filtres li {
@@ -225,7 +230,7 @@ input {
 
 .carte_hebergement,
 .carte_populaires {
-  border: solid white 4px;
+  padding: 4px;
   border-radius: 20px;
   box-shadow: 0px 0px 10px grey;
   margin: 20px 0px;
@@ -251,6 +256,10 @@ h4 {
 }
 .etoile {
   color: #0065fc;
+}
+
+.etoile-grise {
+  color: #f2f2f2;
 }
 
 .afficher-plus {
@@ -341,21 +350,19 @@ h4 {
   border-top-left-radius: 20px;
 }
 
-.activites p {
+.activites h4 {
   padding: 15px;
 }
 
-.carte_activites_haut {
+/* .carte_activites_haut {
   height: 100%;
 }
-
 .carte_activites_med {
   height: 45%;
 }
-
 .carte_activites_court {
   height: 40%;
-}
+} */
 
 .carte_activites_haut,
 .carte_activites_med,
@@ -371,12 +378,15 @@ h4 {
 .carte_activites_haut img {
   height: 395px;
 }
-.carte_activites_med img {
-  height: 150px;
-}
+
 .carte_activites_med_grand img {
   height: 185px;
 }
+
+.carte_activites_med img {
+  height: 150px;
+}
+
 .carte_activites_court img {
   height: 130px;
 }
@@ -416,6 +426,8 @@ footer {
   }
 
   #logo {
+    padding-left: 20px;
+    order: -2;
     width: 70%;
   }
 
@@ -424,9 +436,8 @@ footer {
     order: -1;
   }
 
-  #logo {
-    padding-left: 20px;
-    order: -2;
+  #sinscrire:hover {
+    border-color: white;
   }
 
   nav a:hover {
@@ -523,12 +534,27 @@ footer {
     padding: 0px 30px;
   }
 
-  .activites_col {
-    justify-content: space-evenly;
-  }
-
   .activites h2 {
     margin-left: 30px;
+  }
+
+  .activites_col {
+    width: 290px;
+    height: auto;
+  }
+
+  .carte_activites_haut,
+  .carte_activites_med,
+  .carte_acvtivites_med_grand,
+  .carte_activites_court {
+    margin-bottom: 30px;
+  }
+
+  .carte_activites_haut img,
+  .carte_activites_med img,
+  .carte_activites_med_grand img,
+  .carte_activites_court img {
+    height: 120px;
   }
 
   /***************** MEDIAQ - FOOTER  *******************/
