@@ -572,8 +572,20 @@ footer {
 /* ************************* (769 px - 991 px) ********************* */
 
 @media (min-width: 768px) and (max-width: 991px) {
-  .heber #logo {
-    width: 50%;
+  .hebergements {
+    width: auto;
+  }
+
+  .carte_hebergement {
+    width: 260px;
+  }
+
+  .populaires_container {
+    width: auto;
+  }
+
+  #logo {
+    width: 45%;
   }
 
   .container-cartes-heberge article:nth-child(n + 4) {
